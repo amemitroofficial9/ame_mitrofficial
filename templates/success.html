@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submission Successful</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      background-color: white;
+      padding: 35px 25px;
+      border-radius: 16px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+      max-width: 90%;
+      width: 400px;
+    }
+
+    h1 {
+      color: #28a745;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 24px;
+      margin: 10px 5px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .blue-button {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .blue-button:hover {
+      background-color: #0056b3;
+    }
+
+    .green-button {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .green-button:hover {
+      background-color: #1c7c31;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 20px;
+      }
+
+      button {
+        width: 100%;
+        margin: 8px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>✅ {{ message }}</h1>
+
+    <a href="{{ return_link }}">
+      <button class="blue-button">Submit Another</button>
+    </a>
+
+    <a href="/">
+      <button class="green-button">Go to Home</button>
+    </a>
+  </div>
+</body>
+</html>

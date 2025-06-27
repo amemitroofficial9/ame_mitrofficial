@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Join Ame Mitro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: url("https://pbs.twimg.com/profile_images/649283090599161856/tZprLzcy_400x400.png") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      width: 95%;
+      max-width: 500px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #222;
+      font-size: 28px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 15px;
+      margin-top: 12px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      font-size: 18px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 25px;
+        width: 90%;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      input, textarea {
+        font-size: 16px;
+        padding: 14px;
+      }
+
+      input[type="submit"] {
+        font-size: 17px;
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1><strong>Join with us</strong></h1>
+    <form method="POST" action="/inquiry">
+      <input type="text" name="name" placeholder="your full name" required>
+      <input type="text" name="area" placeholder="address" required>
+      <input type="text" name="phone" placeholder="contact Number" required>
+      <input type="text" name="sangh" placeholder="your Sangh" required>
+      <textarea name="info_source" rows="3" placeholder="Where did you get information about us?" required></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

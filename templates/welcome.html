@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Ame Mitro</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NH0XNPGK0Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NH0XNPGK0Y');
+  </script>
+</head>
+<body>
+  <!-- White overlay for opening animation -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Main container -->
+  <div class="container">
+    <h1><strong>🙏 PRANAM 🙏</strong></h1>
+    <p>Let's Discover All Prachin Jinalayas of Vadodara with Us!!!</p>
+
+    <div class="buttons">
+      <a href="{{ url_for('join') }}">
+        <button class="join-button">Join Our Group</button>
+      </a>
+      <a href="https://drive.google.com/drive/folders/1-11JPWd0UKXWNrwne3Nwd1-iti0in2ST" target="_blank">
+        <button class="photos-button">Explore our work</button>
+      </a>
+      <a href="{{ url_for('about') }}">
+        <button class="about-button">More About Us</button>
+      </a>
+      <a href="{{ url_for('show_events') }}">
+        <button class="events-button">📅 Upcoming Events</button>
+      </a>
+      <a href="{{ url_for('feedback') }}">
+        <button class="feedback-button">Give Feedback</button>
+      </a>
+    </div>
+
+    <p style="margin-top: 20px;">Managed by : Team Ame Kalyan Mitro Vadodara</p>
+  </div>
+
+  <!-- JS for fade animation -->
+  <script>
+    window.addEventListener('load', () => {
+      const overlay = document.getElementById('overlay');
+      overlay.classList.add('fade-out');
+      setTimeout(() => overlay.style.display = 'none', 1000);
+    });
+  </script>
+</body>
+</html>

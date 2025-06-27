@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback - Ame Mitro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px;
+    }
+
+    .form-box {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background: black;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h2>🙏 Send Us Your Feedback</h2>
+    <form method="POST" action="/feedback">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="text" name="phone" placeholder="Contact Number (optional)">
+      <textarea name="feedback" rows="5" placeholder="Your Feedback" required></textarea>
+      <input type="submit" value="Send Feedback">
+    </form>
+  </div>
+</body>
+</html>
